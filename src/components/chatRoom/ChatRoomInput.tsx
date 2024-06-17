@@ -8,7 +8,11 @@ interface Props {
 const ChatRoomInput = ({ emitMessage, user }: Props) => {
   const ref = useRef<HTMLInputElement>(null);
   return (
-    <div className="h-2/6 bg-white">
+    <div
+      className="h-1/6 bg-white"
+      onClick={() => {
+        ref.current?.focus();
+      }}>
       <div className="p-3 h-full">
         <input
           onKeyDown={(e) => {
