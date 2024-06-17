@@ -42,12 +42,11 @@ const ChatRoomContainer = () => {
       //   });
       //   if (!res.ok) throw new Error('에러');
       // }
-      setTimeout(async () => {
-        const res = await fetch('/api/chat', {
-          method: 'POST',
-          body: JSON.stringify(body),
-        });
-      }, 1000);
+
+      const res = await fetch('/api/chat', {
+        method: 'POST',
+        body: JSON.stringify(body),
+      });
     } catch (e) {
       console.error(e);
     }
